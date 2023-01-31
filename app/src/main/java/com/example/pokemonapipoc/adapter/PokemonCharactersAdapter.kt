@@ -30,6 +30,10 @@ class PokemonCharactersAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val itemPosition = pokeMonList[position]
+        if(position%2==0){
+
+        }else{
+        }
         with(holder) {
             uiTvPokemonName.text = itemPosition.name.toString()
             uiTvPokemonExperience.text = itemPosition.baseExperience.toString()

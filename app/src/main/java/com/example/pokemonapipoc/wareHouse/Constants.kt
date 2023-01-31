@@ -2,7 +2,7 @@ package com.example.pokemonapipoc.wareHouse
 
 class Constants {
     companion object{
-        const val LIMIT = 10
+        const val LIMIT = 20
         const val OFFSET = 0
         const val BASE_URL = "https://pokeapi.co/"
         const val SOURSES = "techcrunch"
