@@ -19,13 +19,12 @@
             android:layout_height="300dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_centerIParent="true" />
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/dot1"
+            android:id="@+id/uiDot"
             android:layout_marginTop="10dp"
             app:dotsColor="@android:color/holo_green_light"
             app:selectedDotColor="@android:color/holo_green_dark"
@@ -43,7 +42,7 @@
             android:layout_height="300dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/uImageViewVer"
+            app:layout_constraintTop_toBottomOf="@+id/uiDot"
             app:srcCompat="@drawable/pokemonbackground" />
 
         <androidx.appcompat.widget.AppCompatTextView

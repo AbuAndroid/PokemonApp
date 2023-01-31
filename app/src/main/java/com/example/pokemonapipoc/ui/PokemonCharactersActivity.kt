@@ -4,9 +4,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.core.content.ContentProviderCompat.requireContext
 import com.example.pokemonapipoc.adapter.PokemonCharactersAdapter
+import com.example.pokemonapipoc.adapter.PokemonImagesAdapter
 import com.example.pokemonapipoc.databinding.ActivityMainBinding
+import com.example.pokemonapipoc.model.ImagesModel
 import com.example.pokemonapipoc.model.PokemonCharacters
+import me.relex.circleindicator.CircleIndicator
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class PokemonCharactersActivity : AppCompatActivity() {
@@ -18,6 +22,11 @@ class PokemonCharactersActivity : AppCompatActivity() {
             pokeMonList = arrayListOf()
         )
     }
+
+
+    private var imagesModel: ImagesModel? = null
+    lateinit var viewPagerAdapter: PokemonImagesAdapter
+    lateinit var indicator: CircleIndicator
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
