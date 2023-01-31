@@ -4,13 +4,13 @@ import com.example.pokemonapipoc.mapper.PokemonAttributeMapper
 import com.example.pokemonapipoc.mapper.PokemonResponseMapper
 import com.example.pokemonapipoc.model.PokemonCharacters
 import com.example.pokemonapipoc.model.Results
-import com.example.pokemonapipoc.services.PokeMonApiService
+import com.example.pokemonapipoc.services.PokemonApiService
 import com.example.pokemonapipoc.utils.CustomResponse
 import com.example.pokemonapipoc.utils.LocalException
 import com.example.pokemonapipoc.wareHouse.Constants
 
 
-class PokemonRespository(val pokeMonApiService: PokeMonApiService) {
+class PokemonRespository(val pokeMonApiService: PokemonApiService) {
 
     suspend fun getAllPk():CustomResponse<List<Results>,LocalException> = PokemonResponseMapper.mapp(
         pokeMonApiService.getPokeMonList(Constants.LIMIT,Constants.OFFSET)

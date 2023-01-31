@@ -7,7 +7,7 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 import retrofit2.http.Url
 
-interface PokeMonApiService {
+interface PokemonApiService {
 
     @GET("api/v2/pokemon")
     suspend fun getPokeMonList(@Query("limit")limit:Int,@Query("offset")offset:Int):Response<PokemonModel>

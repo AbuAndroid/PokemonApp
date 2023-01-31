@@ -1,6 +1,6 @@
 package com.example.pokemonapipoc.di.module
 
-import com.example.pokemonapipoc.services.PokeMonApiService
+import com.example.pokemonapipoc.services.PokemonApiService
 import com.example.pokemonapipoc.wareHouse.Constants.Companion.BASE_URL
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -27,5 +27,5 @@ object RestHelper : KoinComponent {
     }.build()
 
    // val client1: NewsApiService by lazy { retrofit.create(NewsApiService::class.java) }
-    val client : PokeMonApiService by lazy{ retrofit.create(PokeMonApiService::class.java)}
+    val client : PokemonApiService by lazy{ retrofit.create(PokemonApiService::class.java)}
 }
