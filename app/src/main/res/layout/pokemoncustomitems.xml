@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp"
+    android:backgroundTint="@color/yellow"
+    app:cardCornerRadius="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/uImageViewVer"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_centerIParent="true" />
+
+        <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dot1"
+            android:layout_marginTop="10dp"
+            app:dotsColor="@android:color/holo_green_light"
+            app:selectedDotColor="@android:color/holo_green_dark"
+            app:dotsSize="15dp"
+            app:dotsSpacing="5dp"
+            app:progressMode="true"
+            app:layout_constraintTop_toBottomOf="@+id/uImageViewVer"
+            app:layout_constraintStart_toStartOf="@+id/uImageViewVer"
+            app:layout_constraintEnd_toEndOf="@+id/uImageViewVer"
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/uiIvPokemonImages"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/uImageViewVer"
+            app:srcCompat="@drawable/pokemonbackground" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/uiTvPokemonName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="30dp"
+            android:text="Pokemon"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/uiIvPokemonImages" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/uiTvPokemonExperienceLable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Base Experience :"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/uiTvPokemonHeightLable"
+            app:layout_constraintTop_toTopOf="@+id/uiTvPokemonHeightLable" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/uiTvPokemonExperience"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15"
+            android:textSize="15sp"
+            android:layout_marginVertical="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/uiTvPokemonExperienceLable"
+            app:layout_constraintStart_toStartOf="@+id/uiTvPokemonExperienceLable"
+            app:layout_constraintEnd_toEndOf="@+id/uiTvPokemonExperienceLable"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/uiTvPokemonHeightLable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="30dp"
+            android:text="Height :"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@+id/uiTvPokemonName"
+            app:layout_constraintStart_toStartOf="@+id/uiTvPokemonName"
+            app:layout_constraintTop_toBottomOf="@+id/uiTvPokemonName" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/uiTvPokemonHeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="25"
+            android:textSize="15sp"
+            android:layout_marginVertical="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/uiTvPokemonHeightLable"
+            app:layout_constraintStart_toStartOf="@+id/uiTvPokemonHeightLable"
+            app:layout_constraintEnd_toEndOf="@+id/uiTvPokemonHeightLable"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/uiTvPokemonWeightLable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Weight"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/uiTvPokemonHeightLable"
+            app:layout_constraintTop_toTopOf="@+id/uiTvPokemonHeightLable" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/uiTvPokemonWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="68"
+            android:textSize="15sp"
+            android:layout_marginVertical="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/uiTvPokemonWeightLable"
+            app:layout_constraintStart_toStartOf="@+id/uiTvPokemonWeightLable"
+            app:layout_constraintEnd_toEndOf="@+id/uiTvPokemonWeightLable"
+            />
+
+        <androidx.core.widget.ContentLoadingProgressBar
+            android:id="@+id/uiIvImageProgress"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/uiIvPokemonImages"
+            app:layout_constraintEnd_toEndOf="@+id/uiIvPokemonImages"
+            app:layout_constraintStart_toStartOf="@+id/uiIvPokemonImages"
+            app:layout_constraintTop_toTopOf="@+id/uiIvPokemonImages" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
